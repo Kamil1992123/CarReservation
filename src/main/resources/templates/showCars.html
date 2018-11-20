@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h3>Moje auta</h3>
+
+<table>
+    <tr>
+        <th>Nazwisko</th>
+        <th>Marka</th>
+        <th>Model</th>
+        <th>Skrzynia biegów</th>
+        <th>Rodzaj nadwozia</th>
+        <th>Rodzaj Paliwa</th>
+        <th>Kolor</th>
+        <th>Dostępność</th>
+        <th>Cena za dzień</th>
+        <th>Data</th>
+    </tr>
+    <th:block th:each="car : ${cars}">
+        <tr>
+            <th th:text="${car.surname}"></th>
+            <th th:text="${car.brand}"></th>
+            <th th:text="${car.model}"></th>
+            <th th:text="${car.transmission}"></th>
+            <th th:text="${car.body}"></th>
+            <th th:text="${car.fuel}"></th>
+            <th th:text="${car.color}"></th>
+            <th th:text="${car.isavailable}"></th>
+            <th th:text="${car.price}"></th>
+            <th th:text="${car.date}"></th>
+        </tr>
+    </th:block>
+</table>
+</div>
+
+
+
+<style>
+    table, th , tr{
+        border: 1px #0b2e13;
+        border-collapse:collapse;
+        font-size: large;
+    }
+
+</style>
+
+
+
+
+</body>
+</html>
