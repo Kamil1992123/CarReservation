@@ -19,8 +19,8 @@ public class CarForm {
     private String body;
     private String fuel;
     private String color;
-    private String isavailable;
-    private int price;
+//    private String isavailable;
+//    private int price;
     private String date;
 
 

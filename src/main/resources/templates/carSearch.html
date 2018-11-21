@@ -2,7 +2,7 @@
 <html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Szukaj</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -21,18 +21,18 @@
 <nav class="navbar navbar-light bg-light">
     <form class="form-inline">
         <button class="btn btn-outline-success"  type="button"><a href="/findcar">Szukaj</a></button>
-        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/showcars">Samochody</a></button>
-        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/carsAvailable">Dostępne samochody</a></button>
+        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/showcars">Rezerwacje</a></button>
+        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/reservation">Dodaj rezerwację</a></button>
         <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/delete">Usuń rezerwację</a></button>
         <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/contact">Kontakt</a></button>
     </form>
 </nav>
 
-<h3>Wprowadź dane:</h3>
+
 
 
 <div class="container">
-
+    <h3>Wprowadź dane:</h3>
 <form th:action="@{/findcar}" method="get" th:object="${search}">
 
     <div>
@@ -59,8 +59,8 @@
     <div>
     <p>Skrzynia biegów:</p>
     <select class="form-control" name="transmission">
-        <option>Automat</option>
-        <option>Manual</option>
+        <option>Automatyczna</option>
+        <option>Manualna</option>
     </select>
     </div>
 
@@ -92,10 +92,10 @@
     <button class="form-control" type="submit" >Szukaj</button>
 
 </form>
-
+<br>
 <h3>Znalezione samochody:</h3>
 
-<table>
+<table border="1">
     <tr>
         <th>Nazwisko</th>
         <th>Marka</th>
@@ -104,8 +104,8 @@
         <th>Rodzaj nadwozia</th>
         <th>Rodzaj Paliwa</th>
         <th>Kolor</th>
-        <th>Dostępność</th>
-        <th>Cena za dzień</th>
+        <!--<th>Dostępność</th>-->
+        <!--<th>Cena za dzień</th>-->
         <th>Data</th>
     </tr>
     <th:block th:each="car : ${search}">
@@ -117,8 +117,8 @@
             <th th:text="${car.body}"></th>
             <th th:text="${car.fuel}"></th>
             <th th:text="${car.color}"></th>
-            <th th:text="${car.isavailable}"></th>
-            <th th:text="${car.price}"></th>
+            <!--<th th:text="${car.isavailable}"></th>-->
+            <!--<th th:text="${car.price}"></th>-->
             <th th:text="${car.date}"></th>
         </tr>
     </th:block>
@@ -127,9 +127,8 @@
 
 
 <style>
-    table, th , tr{
+    table{
         border: 1px #0b2e13;
-        border-collapse:collapse;
         font-size: large;
     }
 

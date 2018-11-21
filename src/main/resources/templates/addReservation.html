@@ -2,7 +2,13 @@
 <html lang="pl-PL" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Dodaj rezerwację:</title>
+    <title>Dodaj rezerwację</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/assets/css/styles.css}" rel="stylesheet">
+
 </head>
 <body>
 
@@ -20,24 +26,28 @@
         <input th:type="text" th:field="*{model}" placeholder="Model" >
         <br>
         <div>
+            <p>Skrzynia biegów:</p>
             <input th:type="radio" th:field="*{transmission}" value="Manualna" checked>Manualna<br>
             <input th:type="radio" th:field="*{transmission}" value="Automatyczna">Automatyczna<br>
         </div>
         <br>
         <div>
+            <p>Rodzaj nadwozia:</p>
             <input th:type="radio" th:field="*{body}" value="Sedan" checked>Sedan<br>
             <input th:type="radio" th:field="*{body}" value="Coupe">Coupe<br>
             <input th:type="radio" th:field="*{body}" value="Kombi">Kombi<br>
-            <input th:type="radio" th:field="*{body}" value="Suv">suv<br>
-            <input th:type="radio" th:field="*{body}" value="Bus">bus<br>
+            <input th:type="radio" th:field="*{body}" value="Suv">SUV<br>
+            <input th:type="radio" th:field="*{body}" value="Bus">BUS<br>
         </div>
         <br>
         <div>
+            <p>Paliwo:</p>
             <input type="radio" value="Benzyna" th:field="*{fuel}" checked >Benzyna<br>
             <input type="radio" value="Diesel"  th:field="*{fuel}" >Diesel
         </div>
         <br>
         <div>
+            <p>Color:</p>
             <input th:type="radio" th:field="*{color}" value="Czarny" checked>Czarny<br>
             <input th:type="radio" th:field="*{color}" value="Biały" >Biały<br>
             <input th:type="radio" th:field="*{color}" value="Niebieski" >Niebieski<br>
@@ -50,10 +60,10 @@
             <input th:type="radio" th:field="*{color}" value="Inny" >Inny<br>
         </div>
         <br>
-        <input th:type="text" th:field="*{isavailable}" placeholder="Available" >
-        <br>
-        <input th:type="number" th:field="*{price}" placeholder="Cena" >
-        <br>
+        <!--<input th:type="text" th:field="*{isavailable}" placeholder="Available" >-->
+        <!--<br>-->
+        <!--<input th:type="number" th:field="*{price}" placeholder="Cena" >-->
+        <!--<br>-->
         <input type="date" th:field="*{date}" name="Date" value="asd">
         <br><br>
         <input type="submit" th:value="Dodaj">

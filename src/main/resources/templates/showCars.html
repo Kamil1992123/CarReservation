@@ -2,14 +2,36 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Rezerwację</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link th:href="@{css/bootstrap.min.css}" rel="stylesheet"/>
+    <link th:href="@{/assets/css/styles.css}" rel="stylesheet">
+
 </head>
+
+
+
+
+
+
 <body>
 
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+        <button class="btn btn-outline-success"  type="button"><a href="/findcar">Szukaj</a></button>
+        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/showcars">Rezerwację</a></button>
+        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/reservation">Dodaj rezerwację</a></button>
+        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/delete">Usuń rezerwację</a></button>
+        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/contact">Kontakt</a></button>
+    </form>
+</nav>
 
-<h3>Moje auta</h3>
 
-<table>
+<h3>Rezerwację:</h3>
+
+<table border="1">
     <tr>
         <th>Nazwisko</th>
         <th>Marka</th>
@@ -18,8 +40,8 @@
         <th>Rodzaj nadwozia</th>
         <th>Rodzaj Paliwa</th>
         <th>Kolor</th>
-        <th>Dostępność</th>
-        <th>Cena za dzień</th>
+        <!--<th>Dostępność</th>-->
+        <!--<th>Cena za dzień</th>-->
         <th>Data</th>
     </tr>
     <th:block th:each="car : ${cars}">
@@ -31,8 +53,8 @@
             <th th:text="${car.body}"></th>
             <th th:text="${car.fuel}"></th>
             <th th:text="${car.color}"></th>
-            <th th:text="${car.isavailable}"></th>
-            <th th:text="${car.price}"></th>
+            <!--<th th:text="${car.isavailable}"></th>-->
+            <!--<th th:text="${car.price}"></th>-->
             <th th:text="${car.date}"></th>
         </tr>
     </th:block>
@@ -42,9 +64,8 @@
 
 
 <style>
-    table, th , tr{
+    table{
         border: 1px #0b2e13;
-        border-collapse:collapse;
         font-size: large;
     }
 

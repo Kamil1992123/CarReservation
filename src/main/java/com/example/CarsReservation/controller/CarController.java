@@ -47,11 +47,6 @@ public class CarController {
     }
 
 
-    @GetMapping("/carsAvailable")
-    public String carsAvailable() {
-        return "carsAvailable";
-    }
-
 
     @GetMapping("/delete")
     @ResponseBody
@@ -87,13 +82,16 @@ public class CarController {
         List<CarModel> searchCarBy = new ArrayList<>();
         Iterable<CarModel> resultList = carRepository.findByBrand(brand);
 
-
         for (CarModel car : resultList)
             searchCarBy.add(car);
-
 
         model.addAttribute("search", searchCarBy);
 
         return "carSearch";
+    }
+
+    @GetMapping("/contact")
+    public String contact(){
+        return "contact";
     }
 }

@@ -27,8 +27,8 @@ public class CarModel {
     private String body;
     private String fuel;
     private String color;
-    private String isavailable;
-    private int price;
+//    private String isavailable;
+//    private int price;
     private LocalDate date;
 
 
@@ -41,8 +41,8 @@ public class CarModel {
         body = carForm.getBody();
         fuel =carForm.getFuel();
         color = carForm.getColor();
-        isavailable = carForm.getIsavailable();
-        price = carForm.getPrice();
+//        isavailable = carForm.getIsavailable();
+//        price = carForm.getPrice();
         date = carForm.getFormatedDate();
     }
 }
