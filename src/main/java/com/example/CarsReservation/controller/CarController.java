@@ -40,8 +40,6 @@ public class CarController {
     public String addCars(@ModelAttribute("carsReservation") CarForm form) {
 
         CarModel carModel = new CarModel(form);
-
-//        model.addAttribute("carsReservation", new CarModel(form));
         carRepository.save(carModel);
         return "Dodano";
     }
@@ -57,13 +55,12 @@ public class CarController {
     @Transactional
     @GetMapping("/delete/{surname}")
     public String deleteBySurname(@PathVariable String surname) {
-        carRepository.deleteBySurname(surname);
+//        carRepository.deleteBySurname(surname);
         return "delete";
     }
 
 
     @GetMapping("/showcars")
-//    @ResponseBody
     public String showAllCars(Model model) {
         List<CarModel> carModelList = new ArrayList<>();
         Iterable<CarModel> carIterable = carRepository.findAll();
@@ -72,7 +69,6 @@ public class CarController {
             carModelList.add(car);
 
         model.addAttribute("cars", carModelList);
-//        return carModelList.toString();
         return "showCars";
     }
 

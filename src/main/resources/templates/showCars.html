@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Rezerwację</title>
+    <title>Samochody</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -21,7 +21,7 @@
 <nav class="navbar navbar-light bg-light">
     <form class="form-inline">
         <button class="btn btn-outline-success"  type="button"><a href="/findcar">Szukaj</a></button>
-        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/showcars">Rezerwację</a></button>
+        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/showcars">Samochody</a></button>
         <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/reservation">Dodaj rezerwację</a></button>
         <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/delete">Usuń rezerwację</a></button>
         <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/contact">Kontakt</a></button>
@@ -32,7 +32,7 @@
 <table class="table" border="1">
     <thead class="thead-dark">
     <tr>
-        <th>Nazwisko</th>
+        <!--<th>Nazwisko</th>-->
         <th>Marka</th>
         <th>Model</th>
         <th>Skrzynia biegów</th>
@@ -41,12 +41,12 @@
         <th>Kolor</th>
         <!--<th>Dostępność</th>-->
         <!--<th>Cena za dzień</th>-->
-        <th>Data</th>
+        <!--<th>Data</th>-->
     </tr>
     </thead>
     <th:block th:each="car : ${cars}">
         <tr>
-            <th th:text="${car.surname}"></th>
+            <!--<th th:text="${car.surname}"></th>-->
             <th th:text="${car.brand}"></th>
             <th th:text="${car.model}"></th>
             <th th:text="${car.transmission}"></th>
@@ -55,7 +55,7 @@
             <th th:text="${car.color}"></th>
             <!--<th th:text="${car.isavailable}"></th>-->
             <!--<th th:text="${car.price}"></th>-->
-            <th th:text="${car.date}"></th>
+            <!--<th th:text="${car.date}"></th>-->
         </tr>
     </th:block>
 </table>
@@ -64,7 +64,7 @@
 <div>
 
     <form method="get" action="/reservation">
-        <button type="submit" >Rezerwacja *</button>
+        <button type="submit" >Rezerwacja</button>
     </form>
 
 

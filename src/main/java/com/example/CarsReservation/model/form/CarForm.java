@@ -12,7 +12,7 @@ import java.time.format.DateTimeFormatter;
 @Component
 public class CarForm {
 
-    private String surname;
+//    private String surname;
     private String brand;
     private String model;
     private String transmission;
@@ -21,14 +21,14 @@ public class CarForm {
     private String color;
 //    private String isavailable;
 //    private int price;
-    private String date;
+//    private String date;
 
 
-    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-    public LocalDate getFormatedDate(){
-        return LocalDate.parse(date,dateTimeFormatter);
-    }
+//    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+//
+//    public LocalDate getFormatedDate(){
+//        return LocalDate.parse(date,dateTimeFormatter);
+//    }
 
 
 }

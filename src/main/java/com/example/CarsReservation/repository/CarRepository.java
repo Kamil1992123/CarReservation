@@ -15,8 +15,12 @@ public interface CarRepository extends CrudRepository<CarModel,Integer> {
     List<CarModel> findByBrand(String brand);
 //     CarModel findByBrand(String brand);
 
-     List<CarModel> deleteBySurname(String brand);
-//     List<CarModel> s
+
+
+
+
+//     List<CarModel> deleteBySurname(String brand);
+
 
 
 

@@ -17,8 +17,8 @@
     <h1>Podaj dane:</h1>
     <form th:action="@{/reservation}" method="post" th:object="${carsReservation}">
 
-        <input class="form-control" type="text" th:field="*{surname}" placeholder="Nazwisko" name="surname" >
-        <br>
+        <!--<input class="form-control" type="text" th:field="*{surname}" placeholder="Nazwisko" name="surname" >-->
+        <!--<br>-->
 
         <input class="form-control" th:type="text" th:field="*{brand}" placeholder="Marka">
         <!--<span th:if="${#field.hasErrors('name')}" th:errors="*{name}"></span>-->
@@ -64,8 +64,8 @@
         <!--<br>-->
         <!--<input th:type="number" th:field="*{price}" placeholder="Cena" >-->
         <!--<br>-->
-        <input type="date" th:field="*{date}" name="Date" value="asd">
-        <br><br>
+        <!--<input type="date" th:field="*{date}" name="Date" value="asd">-->
+        <!--<br><br>-->
         <input type="submit" th:value="Dodaj">
         <br><br>
         <a href="/" type="button" >Powrót</a>

@@ -20,7 +20,7 @@ public class CarModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String surname;
+//    private String surname;
     private String brand;
     private String model;
     private String transmission;
@@ -29,12 +29,12 @@ public class CarModel {
     private String color;
 //    private String isavailable;
 //    private int price;
-    private LocalDate date;
+//    private LocalDate date;
 
 
 
     public CarModel(CarForm carForm){
-        surname = carForm.getSurname();
+//        surname = carForm.getSurname();
         brand = carForm.getBrand();
         model = carForm.getModel();
         transmission = carForm.getTransmission();
@@ -43,6 +43,6 @@ public class CarModel {
         color = carForm.getColor();
 //        isavailable = carForm.getIsavailable();
 //        price = carForm.getPrice();
-        date = carForm.getFormatedDate();
+//        date = carForm.getFormatedDate();
     }
 }

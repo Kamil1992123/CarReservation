@@ -98,7 +98,7 @@
     <table border="1" class="table">
         <thead class="thead-dark">
     <tr>
-        <th>Nazwisko</th>
+        <!--<th>Nazwisko</th>-->
         <th>Marka</th>
         <th>Model</th>
         <th>Skrzynia biegów</th>
@@ -107,12 +107,12 @@
         <th>Kolor</th>
         <!--<th>Dostępność</th>-->
         <!--<th>Cena za dzień</th>-->
-        <th>Data</th>
+        <!--<th>Data</th>-->
         </thead>
     </tr>
     <th:block th:each="car : ${search}">
         <tr>
-            <th th:text="${car.surname}"></th>
+            <!--<th th:text="${car.surname}"></th>-->
             <th th:text="${car.brand}"></th>
             <th th:text="${car.model}"></th>
             <th th:text="${car.transmission}"></th>
@@ -121,7 +121,7 @@
             <th th:text="${car.color}"></th>
             <!--<th th:text="${car.isavailable}"></th>-->
             <!--<th th:text="${car.price}"></th>-->
-            <th th:text="${car.date}"></th>
+            <!--<th th:text="${car.date}"></th>-->
         </tr>
     </th:block>
 </table>
