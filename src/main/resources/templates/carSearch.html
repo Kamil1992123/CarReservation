@@ -85,9 +85,9 @@
     </select>
 
     <br>
-
-    <label>CENA OD  <input type="text"></label>
-    <label>CENA DO  <input type="text"></label>
+    <p>Cena:</p>
+    <label>od  <input type="text" class="form-control"></label>
+    <label>do  <input type="text" class="form-control"></label>
 
     <button class="form-control" type="submit" >Szukaj</button>
 
@@ -95,7 +95,8 @@
 <br>
 <h3>Znalezione samochody:</h3>
 
-<table border="1">
+    <table border="1" class="table">
+        <thead class="thead-dark">
     <tr>
         <th>Nazwisko</th>
         <th>Marka</th>
@@ -107,6 +108,7 @@
         <!--<th>Dostępność</th>-->
         <!--<th>Cena za dzień</th>-->
         <th>Data</th>
+        </thead>
     </tr>
     <th:block th:each="car : ${search}">
         <tr>

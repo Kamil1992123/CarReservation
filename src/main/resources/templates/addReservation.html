@@ -17,13 +17,13 @@
     <h1>Podaj dane:</h1>
     <form th:action="@{/reservation}" method="post" th:object="${carsReservation}">
 
-        <input type="text" th:field="*{surname}" placeholder="Nazwisko" name="surname" >
+        <input class="form-control" type="text" th:field="*{surname}" placeholder="Nazwisko" name="surname" >
         <br>
 
-        <input th:type="text" th:field="*{brand}" placeholder="Marka">
+        <input class="form-control" th:type="text" th:field="*{brand}" placeholder="Marka">
         <!--<span th:if="${#field.hasErrors('name')}" th:errors="*{name}"></span>-->
         <br>
-        <input th:type="text" th:field="*{model}" placeholder="Model" >
+        <input class="form-control" th:type="text" th:field="*{model}" placeholder="Model" >
         <br>
         <div>
             <p>Skrzynia biegów:</p>
